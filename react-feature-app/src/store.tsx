@@ -1,11 +1,11 @@
 // import {configureStore} from '@reduxjs/toolkit';
 
-import {applyMiddleware, createStore} from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import reducres from './state';
 import thunk from 'redux-thunk';
 // const store = configureStore({
 //     reducer:{
- 
+
 //     }
 // })
 
@@ -14,8 +14,4 @@ import thunk from 'redux-thunk';
 // // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 // export type AppDispatch = typeof store.dispatch
 
-export const store = createStore(
-    reducres,
-    {},
-    applyMiddleware(thunk)
-)
+export const store = createStore(reducres, {}, applyMiddleware(thunk));

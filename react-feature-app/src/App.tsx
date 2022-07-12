@@ -3,12 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import Test from './components/test1/Tset';
 
-
-
 function App() {
   return (
     <div>
-      <Test/>
+      <Test />
     </div>
   );
 }
