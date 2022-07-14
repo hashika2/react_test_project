@@ -1,18 +1,13 @@
-import {
-  useDispatch,
-  useDispatch as useReduxDispatch,
-  useSelector as useReduxSelector,
-  useSelector
-} from 'react-redux';
+import { useDispatch as useReduxDispatch, useSelector as useReduxSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../action';
 
 const Test = () => {
-  const dispatch = useDispatch();
+  const dispatch = useReduxDispatch();
   const { Action1, Action2 } = bindActionCreators(actionCreators, dispatch);
 
-  const accountData = useSelector((state: any) => state);
+  const accountData = useReduxSelector((state: any) => state);
   return (
     <div>
       <Link to="/home">Home</Link>
